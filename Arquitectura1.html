@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación Parcial - JDIAZ</title>
+    <script src="https://kit.fontawesome.com/4fd7432d2b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="icon" href="img/logo.ico">
+</head>
+<body>
+    <header>
+        <div class="header__superior">
+            <div class="logo">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="fecha">
+                <p id="fecha__actual"></p>
+               
+            </div>
+        </div>
+
+        <script>
+            var elementoFecha = document.getElementById("fecha__actual");
+        
+        function actualizarFecha() {
+            var fecha = new Date();
+            
+            var opcionesFecha = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            var fechaFormateada = fecha.toLocaleDateString('es-ES', opcionesFecha);
+            
+            elementoFecha.innerHTML = fechaFormateada;
+            }
+            
+        actualizarFecha();
+        setInterval(actualizarFecha, 1000);
+        </script>
+
+        <div class="container__menu">
+            <div class="menu">
+                <input type="checkbox" id="check__menu">
+                <label id="#label__check" for="check__menu">
+                    <i class="fas fa-bars icon__menu"></i>
+                </label>
+                <nav>
+                    <ul>
+                        <li><a href="index.html"></a></li>
+                        <li><a href="Evolucion.html">Evolución</a></li>
+                        <li><a href="#" id="selected">Arquitecturas</a>
+                            <ul>
+                                <li><a href="Arquitectura1.html" id="selected">Arquitectura #1</a></li>
+                                <li><a href="Arquitectura2.html">Arquitectura #2</a></li>
+                                <li><a href="Arquitectura3.html">Arquitectura #3</a></li>
+                                <li><a href="Arquitectura4.html">Arquitectura #4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Tecnicas.html">Técnicas</a></li>
+                        <li><a href="Aplicaciones.html">Aplicaciones</a></li>
+                        <li><a href="Referencias.html">Referencias</a></li>
+                   
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        
+    </header>
+
+    <main>
+        <article>
+            <h1>#1 Arquitectura de Memoria Compartida (Shared Memory)</h1>
+            <br>
+            <img src="img/sharedmemory.png" alt="Memoria Compartida" id="arquitecturas">
+            <p>En la arquitectura de memoria compartida, varios procesadores o núcleos comparten un espacio de memoria común. Esto significa que todos los procesadores pueden acceder a la misma ubicación de memoria, lo que facilita la comunicación y el intercambio de datos entre ellos. Esta arquitectura se basa en la idea de que los procesadores pueden comunicarse entre sí a través de variables compartidas en la memoria.</p>
+            <p>Una de las ventajas principales de la arquitectura de memoria compartida es la comunicación rápida y directa entre los procesadores. Dado que todos los procesadores tienen acceso directo a la misma memoria, no es necesario transferir datos a través de una red de comunicación, lo que resulta en una latencia más baja y una mayor velocidad de procesamiento. Esta arquitectura es especialmente adecuada para aplicaciones con alta coherencia de datos y un gran intercambio de información entre los procesadores.</p>
+            <br>
+            <p>Sin embargo, la arquitectura de memoria compartida también presenta algunos desafíos. La escalabilidad puede ser un problema, ya que el acceso simultáneo a la memoria compartida por parte de múltiples procesadores puede generar cuellos de botella y limitar el rendimiento. Además, la sincronización y la gestión de los accesos a la memoria compartida deben ser cuidadosamente controladas para evitar problemas como las condiciones de carrera y la inconsistencia de datos.</p>
+            <p>Para implementar la arquitectura de memoria compartida, se utilizan diferentes enfoques y tecnologías, como los multiprocesadores simétricos (SMP), donde todos los procesadores tienen igual jerarquía, y las arquitecturas de acceso no uniforme a la memoria (NUMA), donde los procesadores tienen acceso más rápido a ciertas regiones de la memoria.</p>
+            <p>En resumen, la arquitectura de memoria compartida permite una comunicación rápida y directa entre procesadores al compartir un espacio de memoria común. Es especialmente adecuada para aplicaciones con alta coherencia de datos y un gran intercambio de información entre los procesadores. Sin embargo, se deben considerar cuidadosamente la escalabilidad, la sincronización y la gestión de accesos para optimizar el rendimiento y evitar problemas de consistencia de datos.</p>
+        </article>
+
+        <article>
+            <h2>Videos relacionados al tema:</h2>
+            <p>Puedes ver los siguientes videos para ampliar los conocimientos de la arquitectura en cuestión.</p> <br>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/E8Bei4XtHQI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/JFHFvThUGRc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </article>
+    </main>
+    
+    <footer>
+        <div class="pie_pagina">
+            <div class="footer__derechos">
+                <small>&copy; 2023 <b>Jelsy Diaz (23-0982)</b> - Todos los Derechos Reservados.</small>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

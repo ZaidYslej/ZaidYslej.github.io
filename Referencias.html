@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación Parcial - JDIAZ</title>
+    <script src="https://kit.fontawesome.com/4fd7432d2b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="icon" href="img/logo.ico">
+</head>
+<body>
+    <header>
+        <div class="header__superior">
+            <div class="logo">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="fecha">
+                <p id="fecha__actual"></p>
+               
+            </div>
+        </div>
+
+        <script>
+            var elementoFecha = document.getElementById("fecha__actual");
+        
+        function actualizarFecha() {
+            var fecha = new Date();
+            
+            var opcionesFecha = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            var fechaFormateada = fecha.toLocaleDateString('es-ES', opcionesFecha);
+            
+            elementoFecha.innerHTML = fechaFormateada;
+            }
+            
+        actualizarFecha();
+        setInterval(actualizarFecha, 1000);
+        </script>
+
+        <div class="container__menu">
+            <div class="menu">
+                <input type="checkbox" id="check__menu">
+                <label id="#label__check" for="check__menu">
+                    <i class="fas fa-bars icon__menu"></i>
+                </label>
+                <nav>
+                    <ul>
+                        <li><a href="index.html"></a></li>
+                        <li><a href="Evolucion.html">Evolución</a></li>
+                        <li><a href="#">Arquitecturas</a>
+                            <ul>
+                                <li><a href="Arquitectura1.html">Arquitectura #1</a></li>
+                                <li><a href="Arquitectura2.html">Arquitectura #2</a></li>
+                                <li><a href="Arquitectura3.html">Arquitectura #3</a></li>
+                                <li><a href="Arquitectura4.html">Arquitectura #4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Tecnicas.html">Técnicas</a></li>
+                        <li><a href="Aplicaciones.html">Aplicaciones</a></li>
+                        <li><a href="Referencias.html" id="selected">Referencias</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        
+    </header>
+
+    <main>
+        <article>
+            <h2>Referencias</h2>
+            <p>Aqui se encuentran algunas de los recursos informativos consultados, puedes acceder a ellos para ampliar el tema en caso de que estes interesado/a.</p>
+        </article>
+
+        <article>
+            <h2>-¿Qué es Hadoop?</h2> <br>
+            <p>Documentación oficial de Apache Hadoop que explica qué es Hadoop y cómo funciona.</p>
+            <a href="https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html" target="_blank">Hadoop: Setting up a Single Node Cluster.</a>
+        </article>
+
+        <article>
+            <h2>-Técnicas de Programación Paralela:</h2>
+            <p>Un tutorial del Lawrence Livermore National Laboratory que cubre los fundamentos de la programación paralela y sus técnicas.</p>
+            <a href="https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html" target="_blank">Introduction to Parallel Computing Tutorial.</a>
+        </article>
+
+        <article>
+            <h2>-Optimización: Programación Paralela</h2>
+            <p>Un documento que abunda en como la Programación Paralela es una tecnica de optimización de tiempos de producción en una empresa.</p>
+           <a href="https://www.ecorfan.org/handbooks/Ciencias%20de%20la%20Ingenieria%20y%20Tecnologia%20T-VII/ARTICULO%207.pdf" target="_blank">Programación Paralela: Tecnica de Optimización</a>
+        </article>
+
+        <article>
+            <h2>-Message Passing Interface (MPI)</h2>
+            <p>Un tutorial interactivo sobre el estándar MPI utilizado para la programación en arquitecturas de memoria distribuida.</p>
+            <a href="https://www.codingame.com/playgrounds/349/introduction-to-mpi/introduction-to-distributed-computing" target="_blank">Introduction to distributed computing with MPI</a>
+        </article>
+
+        <article>
+            <h2>-Memoria Compartida vs. Memoria Distribuida</h2>
+            <p>Un artículo de FutureLearn que explora la diferencia entre la arquitectura de memoria compartida y la arquitectura de memoria distribuida en el contexto de la supercomputación.</p>
+            <a href="https://www.futurelearn.com/info/courses/supercomputing/0/steps/24028" target="_blank">Shared memory vs Distributed memory</a>
+        </article>
+    </main>
+    
+    <footer>
+        <div class="pie_pagina">
+            <div class="footer__derechos">
+                <small>&copy; 2023 <b>Jelsy Diaz (23-0982)</b> - Todos los Derechos Reservados.</small>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación Parcial - JDIAZ</title>
+    <script src="https://kit.fontawesome.com/4fd7432d2b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="icon" href="img/logo.ico">
+</head>
+<body>
+    <header>
+        <div class="header__superior">
+            <div class="logo">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="fecha">
+                <p id="fecha__actual"></p>
+               
+            </div>
+        </div>
+
+        <script>
+            var elementoFecha = document.getElementById("fecha__actual");
+        
+        function actualizarFecha() {
+            var fecha = new Date();
+            
+            var opcionesFecha = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            var fechaFormateada = fecha.toLocaleDateString('es-ES', opcionesFecha);
+            
+            elementoFecha.innerHTML = fechaFormateada;
+            }
+            
+        actualizarFecha();
+        setInterval(actualizarFecha, 1000);
+        </script>
+
+        <div class="container__menu">
+            <div class="menu">
+                <input type="checkbox" id="check__menu">
+                <label id="#label__check" for="check__menu">
+                    <i class="fas fa-bars icon__menu"></i>
+                </label>
+                <nav>
+                    <ul>
+                        <li><a href="index.html"></a></li>
+                        <li><a href="Evolucion.html" id="selected">Evolución</a></li>
+                        <li><a href="#">Arquitecturas</a>
+                            <ul>
+                                <li><a href="#">Arquitectura #1</a></li>
+                                <li><a href="#">Arquitectura #2</a></li>
+                                <li><a href="#">Arquitectura #3</a></li>
+                                <li><a href="#">Arquitectura #4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Tecnicas.html">Técnicas</a></li>
+                        <li><a href="Aplicaciones.html">Aplicaciones</a></li>
+                        <li><a href="Referencias.html">Referencias</a></li>
+                        
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        
+    </header>
+
+    <main>
+        <article>
+            <h2>¿Qué es la Programación Paralela y Distribuida?</h2> <br>
+            <p>La Programación Paralela y Distribuida (PPD) es una rama de la informática que se encarga de desarrollar algoritmos y técnicas para la ejecución simultánea de tareas en múltiples procesadores o sistemas distribuidos.</p>
+            <p>El objetivo principal es mejorar el rendimiento y la eficiencia de los programas al dividir las tareas en subprocesos que pueden ejecutarse de forma paralela.</p>
+        </article>
+
+        <article>
+            <h1>Evolución de la Programación Paralela y Distribuida (PPD)</h1> <br>
+            <h2>1. Computadoras Multiprocesador</h2>
+            <p>En los años 70 y 80, surgieron las primeras computadoras multiprocesador. Estos sistemas permitían la ejecución de múltiples tareas de forma concurrente al tener varios procesadores trabajando en paralelo. Sin embargo, la programación en estas máquinas era compleja y requería un profundo conocimiento de la arquitectura subyacente. Los programadores debían gestionar manualmente la asignación de tareas a los distintos procesadores y sincronizar su ejecución.</p>
+            
+        </article>
+
+        <article>
+            <h2>2. Memoria Compartida y Paso de Mensajes</h2>
+            <p>En los años 90, se desarrollaron técnicas que facilitaron la programación paralela. Dos enfoques principales fueron la programación basada en memoria compartida y la programación basada en paso de mensajes. La programación basada en memoria compartida utiliza variables compartidas entre los distintos hilos de ejecución, lo que simplifica la comunicación entre ellos. Por otro lado, la programación basada en paso de mensajes se basa en la comunicación explícita entre los hilos a través de envío y recepción de mensajes. Estas abstracciones facilitaron la escritura de programas paralelos, ya que los programadores podían trabajar con interfaces más sencillas.</p>
+        
+        </article>
+
+        <article>
+            <h2>3. Clústeres de Computadoras</h2>
+            <p>A medida que los avances en la tecnología de redes se hicieron más accesibles, surgieron los clústeres de computadoras. Estos clústeres consisten en la interconexión de múltiples computadoras independientes, lo que permitió el desarrollo de sistemas distribuidos de alto rendimiento y escalables. En lugar de depender de una única máquina multiprocesador, los programadores pudieron aprovechar el poder de cómputo distribuido a través de la comunicación y coordinación de las computadoras en el clúster.</p>
+        </article>
+
+        <article>
+            <h2>4. Computación en la Nube</h2>
+            <p>En la última década, la computación en la nube ha revolucionado la forma en que se realiza la programación paralela y distribuida. Los proveedores de servicios en la nube ofrecen recursos escalables y flexibles, permitiendo a los desarrolladores ejecutar aplicaciones paralelas en infraestructuras distribuidas sin preocuparse por la gestión de los recursos subyacentes. La computación en la nube ha democratizado el acceso a la programación paralela y distribuida, ya que los desarrolladores pueden aprovechar grandes cantidades de recursos sin la necesidad de adquirir hardware costoso.</p>
+        </article>
+
+        <article>
+            <h2>5. Supercomputadoras y Computación de Alto Rendimiento (HPC)</h2>
+            <p>En la actualidad, se siguen desarrollando supercomputadoras y sistemas de computación de alto rendimiento para abordar problemas computacionalmente intensivos. Estos sistemas utilizan técnicas avanzadas de programación paralela y distribuida para aprovechar miles o incluso millones de procesadores en paralelo. La programación eficiente en estos entornos requiere algoritmos especializados y técnicas de optimización para maximizar el rendimiento y la eficiencia de las aplicaciones.</p>
+        </article>
+    </main>
+    
+    <footer>
+        <div class="pie_pagina">
+            <div class="footer__derechos">
+                <small>&copy; 2023 <b>Jelsy Diaz (23-0982)</b> - Todos los Derechos Reservados.</small>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

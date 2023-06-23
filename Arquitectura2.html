@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación Parcial - JDIAZ</title>
+    <script src="https://kit.fontawesome.com/4fd7432d2b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="icon" href="img/logo.ico">
+</head>
+<body>
+    <header>
+        <div class="header__superior">
+            <div class="logo">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="fecha">
+                <p id="fecha__actual"></p>
+               
+            </div>
+        </div>
+
+        <script>
+            var elementoFecha = document.getElementById("fecha__actual");
+        
+        function actualizarFecha() {
+            var fecha = new Date();
+            
+            var opcionesFecha = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            var fechaFormateada = fecha.toLocaleDateString('es-ES', opcionesFecha);
+            
+            elementoFecha.innerHTML = fechaFormateada;
+            }
+            
+        actualizarFecha();
+        setInterval(actualizarFecha, 1000);
+        </script>
+
+        <div class="container__menu">
+            <div class="menu">
+                <input type="checkbox" id="check__menu">
+                <label id="#label__check" for="check__menu">
+                    <i class="fas fa-bars icon__menu"></i>
+                </label>
+                <nav>
+                    <ul>
+                        <li><a href="index.html"></a></li>
+                        <li><a href="Evolucion.html">Evolución</a></li>
+                        <li><a href="#" id="selected">Arquitecturas</a>
+                            <ul>
+                                <li><a href="Arquitectura1.html">Arquitectura #1</a></li>
+                                <li><a href="Arquitectura2.html" id="selected">Arquitectura #2</a></li>
+                                <li><a href="Arquitectura3.html">Arquitectura #3</a></li>
+                                <li><a href="Arquitectura4.html">Arquitectura #4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Tecnicas.html">Técnicas</a></li>
+                        <li><a href="Aplicaciones.html">Aplicaciones</a></li>
+                        <li><a href="Referencias.html">Referencias</a></li>
+                      
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        
+    </header>
+
+    <main>
+        <article>
+            <h1>#2 Arquitectura de Memoria Distribuida (Distributed Memory)</h1>
+            <br>
+            <img src="img/distributedmemory.jpg" alt="Memoria Distribuida" id="arquitecturas">
+            <p>La arquitectura de memoria distribuida es un modelo en el que cada procesador o nodo de cómputo tiene su propia memoria local y se comunica con otros nodos a través de mensajes. A diferencia de la arquitectura de memoria compartida, en la que todos los procesadores comparten un espacio de memoria común, en la arquitectura de memoria distribuida cada nodo es responsable de su propia memoria y debe enviar y recibir mensajes para compartir datos entre nodos.</p>
+            <p>En esta configuración, los nodos trabajan de manera independiente y procesan datos en paralelo. Cada nodo tiene acceso rápido y directo a su memoria local, lo que le permite realizar operaciones de lectura y escritura sin tener que acceder a la memoria de otros nodos. Para compartir datos, los nodos deben intercambiar mensajes a través de una red de comunicación.</p>
+            <br>
+            <p>La arquitectura de memoria distribuida es especialmente adecuada para aplicaciones que requieren procesamiento distribuido y trabajan con conjuntos de datos más grandes. Cada nodo puede procesar una parte de los datos de manera independiente, lo que permite una escalabilidad eficiente. Además, esta arquitectura puede manejar grandes cargas de trabajo y grandes volúmenes de datos al distribuir la carga de procesamiento entre múltiples nodos.</p>
+            <p>Uno de los desafíos clave en la arquitectura de memoria distribuida es la coordinación y sincronización de los nodos. Debido a que cada nodo tiene su propia memoria y ejecuta de manera independiente, es necesario establecer mecanismos para garantizar la coherencia y consistencia de los datos compartidos. Los nodos deben comunicarse y coordinar sus tareas para evitar conflictos y asegurar resultados correctos.</p>
+            <p>La programación en una arquitectura de memoria distribuida puede requerir el uso de bibliotecas y herramientas específicas que faciliten la comunicación y el intercambio de datos entre nodos. Algunos ejemplos populares incluyen el uso de bibliotecas de paso de mensajes como MPI (Message Passing Interface) y modelos de programación distribuida como el paradigma de programación basado en tareas.</p>
+            <p>En resumen, la arquitectura de memoria distribuida es un modelo en el que cada nodo tiene su propia memoria local y se comunica con otros nodos a través de mensajes. Es especialmente adecuada para aplicaciones que requieren procesamiento distribuido y trabajan con conjuntos de datos más grandes. La escalabilidad, el procesamiento paralelo y la coordinación entre nodos son aspectos clave de esta arquitectura.</p>
+        </article>
+
+        <article>
+            <h2>Videos relacionados al tema:</h2>
+            <p>Puedes ver los siguientes videos para ampliar los conocimientos de la arquitectura en cuestión.</p> <br>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/npfMR2kOeKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ze_B3dpLFPs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </article>
+    </main>
+    
+    <footer>
+        <div class="pie_pagina">
+            <div class="footer__derechos">
+                <small>&copy; 2023 <b>Jelsy Diaz (23-0982)</b> - Todos los Derechos Reservados.</small>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

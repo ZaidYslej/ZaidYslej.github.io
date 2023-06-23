@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación Parcial - JDIAZ</title>
+    <script src="https://kit.fontawesome.com/4fd7432d2b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="icon" href="img/logo.ico">
+</head>
+<body>
+    <header>
+        <div class="header__superior">
+            <div class="logo">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="fecha">
+                <p id="fecha__actual"></p>
+               
+            </div>
+        </div>
+
+        <script>
+            var elementoFecha = document.getElementById("fecha__actual");
+        
+        function actualizarFecha() {
+            var fecha = new Date();
+            
+            var opcionesFecha = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            var fechaFormateada = fecha.toLocaleDateString('es-ES', opcionesFecha);
+            
+            elementoFecha.innerHTML = fechaFormateada;
+            }
+            
+        actualizarFecha();
+        setInterval(actualizarFecha, 1000);
+        </script>
+
+        <div class="container__menu">
+            <div class="menu">
+                <input type="checkbox" id="check__menu">
+                <label id="#label__check" for="check__menu">
+                    <i class="fas fa-bars icon__menu"></i>
+                </label>
+                <nav>
+                    <ul>
+                        <li><a href="index.html"></a></li>
+                        <li><a href="Evolucion.html">Evolución</a></li>
+                        <li><a href="#">Arquitecturas</a>
+                            <ul>
+                                <li><a href="Arquitectura1.html">Arquitectura #1</a></li>
+                                <li><a href="Arquitectura2.html">Arquitectura #2</a></li>
+                                <li><a href="Arquitectura3.html">Arquitectura #3</a></li>
+                                <li><a href="Arquitectura4.html">Arquitectura #4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Tecnicas.html">Técnicas</a></li>
+                        <li><a href="Aplicaciones.html"  id="selected">Aplicaciones</a></li>
+                        <li><a href="Referencias.html">Referencias</a></li>
+                       
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        
+    </header>
+
+    <main>
+        <article>
+            <h1>Aplicaciones que se deben abordar empleando PPD</h1>
+            <br>
+            <p>En la actualidad, la programación paralela y distribuida desempeña un papel crucial en diversas aplicaciones. El análisis de Big Data se beneficia de la capacidad de procesar grandes volúmenes de información de manera eficiente y descubrir patrones ocultos. Las simulaciones científicas se aceleran al distribuir la carga de trabajo entre múltiples nodos de cómputo, permitiendo estudiar fenómenos complejos.</p>
+            <p>En la industria del entretenimiento, la programación paralela mejora el renderizado y la animación gráfica en tiempo real. En el ámbito financiero, la programación paralela permite optimizar carteras de inversión y analizar riesgos. Estas son solo algunas de las muchas aplicaciones donde la programación paralela y distribuida impulsan la innovación y el progreso en diversos campos.</p>
+        </article>
+
+        <article>
+            <h2>1. Análisis de Big Data</h2>
+            <p>Con el crecimiento exponencial de los datos en la actualidad, el análisis de big data requiere técnicas de programación paralela y distribuida para procesar grandes volúmenes de información.</p>
+            <p>La programación paralela permite dividir la carga de trabajo en múltiples nodos y realizar cálculos en paralelo para acelerar el procesamiento y obtener resultados más rápidos en tareas como análisis de patrones, minería de datos y aprendizaje automático.</p>
+        </article>
+
+        <article>
+            <h2>2. Simulaciones Científicas</h2>
+            <p>Las simulaciones científicas, como las simulaciones de física, química o clima, implican realizar cálculos complejos que requieren una gran cantidad de cómputo.</p>
+            <p>La programación paralela permite distribuir la carga de trabajo entre múltiples procesadores o nodos de computación, acelerando el tiempo de ejecución de las simulaciones y permitiendo la exploración de escenarios más complejos y detallados.</p>
+        </article>
+
+        <article>
+            <h2>3. Renderizado y Animación Gráfica</h2>
+            <p> En la industria del entretenimiento y los videojuegos, el renderizado de gráficos y la animación requieren un procesamiento intensivo.</p>
+            <p>La programación paralela permite distribuir la carga de trabajo entre múltiples núcleos de procesamiento o incluso utilizar tarjetas gráficas (GPUs) para acelerar la generación de imágenes y la renderización en tiempo real.</p>
+        </article>
+
+        <article>
+            <h2>4. Optimización y Modelado Financiero</h2>
+            <p>El análisis financiero, la predicción de mercados y la optimización de carteras de inversión implican el procesamiento de grandes cantidades de datos y cálculos complejos.</p>
+            <p>La programación paralela y distribuida permite realizar análisis simultáneos en diferentes datos o escenarios, acelerando el tiempo de respuesta y permitiendo una toma de decisiones más rápida y precisa.</p>
+        </article>
+
+        <article>
+            <h2>5. Procesamiento de Imágenes y Vídeo</h2>
+            <p>Aplicaciones como reconocimiento de imágenes, procesamiento de vídeo en tiempo real, análisis de imágenes médicas y visión por computadora pueden beneficiarse de la programación paralela para procesar grandes volúmenes de datos de manera eficiente.</p>
+            <p>Al dividir la carga de trabajo entre múltiples hilos o nodos de procesamiento, se pueden realizar tareas como detección de objetos, seguimiento de movimiento y mejoramiento de calidad de imágenes o vídeos de manera más rápida y efectiva.</p>
+        </article>
+    </main>
+    
+    <footer>
+        <div class="pie_pagina">
+            <div class="footer__derechos">
+                <small>&copy; 2023 <b>Jelsy Diaz (23-0982)</b> - Todos los Derechos Reservados.</small>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

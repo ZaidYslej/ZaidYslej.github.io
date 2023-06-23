@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación Parcial - JDIAZ</title>
+    <script src="https://kit.fontawesome.com/4fd7432d2b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="icon" href="img/logo.ico">
+</head>
+<body>
+    <header>
+        <div class="header__superior">
+            <div class="logo">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="fecha">
+                <p id="fecha__actual"></p>
+               
+            </div>
+        </div>
+
+        <script>
+            var elementoFecha = document.getElementById("fecha__actual");
+        
+        function actualizarFecha() {
+            var fecha = new Date();
+            
+            var opcionesFecha = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            var fechaFormateada = fecha.toLocaleDateString('es-ES', opcionesFecha);
+            
+            elementoFecha.innerHTML = fechaFormateada;
+            }
+            
+        actualizarFecha();
+        setInterval(actualizarFecha, 1000);
+        </script>
+
+        <div class="container__menu">
+            <div class="menu">
+                <input type="checkbox" id="check__menu">
+                <label id="#label__check" for="check__menu">
+                    <i class="fas fa-bars icon__menu"></i>
+                </label>
+                <nav>
+                    <ul>
+                        <li><a href="index.html"></a></li>
+                        <li><a href="Evolucion.html">Evolución</a></li>
+                        <li><a href="#">Arquitecturas</a>
+                            <ul>
+                                <li><a href="Arquitectura1.html">Arquitectura #1</a></li>
+                                <li><a href="Arquitectura2.html">Arquitectura #2</a></li>
+                                <li><a href="Arquitectura3.html">Arquitectura #3</a></li>
+                                <li><a href="Arquitectura4.html">Arquitectura #4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Tecnicas.html"  id="selected">Técnicas</a></li>
+                        <li><a href="Aplicaciones.html">Aplicaciones</a></li>
+                        <li><a href="Referencias.html">Referencias</a></li>
+                        
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        
+    </header>
+
+    <main>
+        <article>
+            <h1>Técnicas de Programación Paralela más utilizadas.</h1> <br>
+            <h2>1. Threading</h2>
+            <p>El threading o hilos de ejecución es una técnica ampliamente utilizada en la programación paralela. Consiste en dividir una tarea en subprocesos o hilos que pueden ejecutarse simultáneamente en un solo procesador.</p>
+            <p>Los hilos comparten recursos y comunicación, lo que puede mejorar el rendimiento y la capacidad de respuesta de una aplicación.</p>
+        </article>
+
+        <article>
+            <h2>2. MPI (Message Passing Interface)</h2>
+            <p>MPI es un estándar de programación utilizado en entornos de computación distribuida. Permite la comunicación entre procesos independientes que se ejecutan en diferentes nodos de un clúster o en sistemas distribuidos.</p>
+            <p>MPI proporciona un conjunto de funciones para enviar y recibir mensajes entre procesos, lo que facilita la sincronización y la coordinación en aplicaciones paralelas.</p>
+        </article>
+
+        <article>
+            <h2>3. OpenMP (Open Multi-Processing)</h2>
+            <p>OpenMP es una API de programación paralela que se utiliza principalmente en sistemas multiprocesador y multi-núcleo. Permite a los programadores utilizar directivas de compilación y anotaciones para especificar regiones paralelas en el código fuente.</p>
+            <p>OpenMP se encarga automáticamente de la distribución y coordinación de los hilos de ejecución, lo que simplifica el desarrollo de aplicaciones paralelas.</p>
+        </article>
+
+        <article>
+            <h2>4. CUDA (Compute Unified Device Architecture)</h2>
+            <p>CUDA es una plataforma de computación paralela desarrollada por NVIDIA para el procesamiento en unidades de procesamiento gráfico (GPU). </p>
+            <p>Permite a los programadores utilizar lenguajes como C o C++ para aprovechar la capacidad de cómputo masivo de las GPUs. CUDA se utiliza comúnmente en aplicaciones de aprendizaje automático, simulaciones científicas y renderizado gráfico acelerado.</p>
+        </article>
+
+        <article>
+            <h2>5. MapReduce</h2>
+            <p>MapReduce es un modelo de programación y procesamiento de datos distribuidos que se utiliza en aplicaciones de análisis de grandes volúmenes de datos. Se basa en la idea de dividir una tarea en dos etapas principales: la fase de "map" que procesa datos en paralelo y la fase de "reduce" que combina los resultados parciales en un resultado final.</p>
+            <p>MapReduce se utiliza ampliamente en sistemas de almacenamiento distribuido como <i>Hadoop.</i></p>
+            <p><i>Hadoop es un framework de software de código abierto diseñado para el procesamiento distribuido y el almacenamiento de grandes volúmenes de datos en clústeres de computadoras. Proporciona una plataforma escalable y confiable para el procesamiento de datos en paralelo, lo que permite realizar análisis y aplicar algoritmos a conjuntos de datos masivos.</i></p>
+        </article>
+
+        <article>
+            <h2>6. SIMD (Single Instruction, Multiple Data)</h2>
+            <p>SIMD es una técnica de programación paralela que aprovecha las capacidades de los procesadores para ejecutar una misma instrucción en paralelo sobre múltiples conjuntos de datos. Se utiliza en aplicaciones que realizan operaciones intensivas en datos, como procesamiento de imágenes, simulaciones físicas y cálculos científicos.</p>
+            <p>SIMD se implementa a través de conjuntos de instrucciones específicas del procesador o utilizando bibliotecas y herramientas de programación especializadas.</p>
+        </article>
+    </main>
+    
+    <footer>
+        <div class="pie_pagina">
+            <div class="footer__derechos">
+                <small>&copy; 2023 <b>Jelsy Diaz (23-0982)</b> - Todos los Derechos Reservados.</small>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

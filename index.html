@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación Parcial - JDIAZ</title>
+    <script src="https://kit.fontawesome.com/4fd7432d2b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="icon" href="img/logo.ico">
+</head>
+<body>
+    <header>
+        <div class="header__superior">
+            <div class="logo">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="fecha">
+                <p id="fecha__actual"></p>
+               
+            </div>
+        </div>
+
+        <script>
+            var elementoFecha = document.getElementById("fecha__actual");
+        
+        function actualizarFecha() {
+            var fecha = new Date();
+            
+            var opcionesFecha = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            var fechaFormateada = fecha.toLocaleDateString('es-ES', opcionesFecha);
+            
+            elementoFecha.innerHTML = fechaFormateada;
+            }
+            
+        actualizarFecha();
+        setInterval(actualizarFecha, 1000);
+        </script>
+
+        <div class="container__menu">
+            <div class="menu">
+                <input type="checkbox" id="check__menu">
+                <label id="#label__check" for="check__menu">
+                    <i class="fas fa-bars icon__menu"></i>
+                </label>
+                <nav>
+                    <ul>
+                        <li><a href="#" id="selected"></a></li>
+                        <li><a href="Evolucion.html">Evolución</a></li>
+                        <li><a href="#">Arquitecturas</a>
+                            <ul>
+                                <li><a href="Arquitectura1.html">Arquitectura #1</a></li>
+                                <li><a href="Arquitectura2.html">Arquitectura #2</a></li>
+                                <li><a href="Arquitectura3.html">Arquitectura #3</a></li>
+                                <li><a href="Arquitectura4.html">Arquitectura #4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Tecnicas.html">Técnicas</a></li>
+                        <li><a href="Aplicaciones.html">Aplicaciones</a></li>
+                        <li><a href="Referencias.html">Referencias</a></li>
+                       
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        
+    </header>
+
+    <main>
+        <article>
+            <h1>¡Bienvenido al Portal de Programación Paralela y Distribuida!</h1>
+            <br>
+            <p>Este portal web ha sido creado con el propósito de proporcionar información completa y actualizada sobre el apasionante campo de la <span>Programación Paralela y Distribuida (PPD)</span>. Aquí encontrarás recursos, conceptos clave y ejemplos prácticos relacionados con esta área de estudio en constante evolución.</p>
+            <p>El objetivo principal de este portal es proporcionarte una visión general de la evolución tecnológica de la Programación Paralela y Distribuida. Además, podrás explorar las principales arquitecturas de soporte utilizadas en la PPD, acceder a técnicas de programación paralela ampliamente empleadas y descubrir las aplicaciones prácticas que se benefician de esta metodología.</p>
+            <p>Además de los contenidos mencionados, encontrarás una sección dedicada a las referencias utilizadas en la creación de este portal, donde se incluirán enlaces autoenlazables a los recursos consultados.</p>
+            <p>Te invitamos a explorar todas las páginas y secciones de este portal para ampliar tus conocimientos en Programación Paralela y Distribuida. ¡Esperamos que encuentres la información que necesitas y que este portal sea una herramienta útil en tu aprendizaje!</p>
+        </article>
+
+        <article>
+            <h2>Diseñador de este portal</h2>
+            <img src="img/foto-jelsy.jpeg" alt="foto de jelsy diaz" id="fotojelsy">
+            <p>Soy Jelsy M. Diaz J., estudiante de Ingeniería en Tecnologías de la Información y la Comunicación en la Universidad Iberoamericana (UNIBE) de la República Dominicana. He creado este portal con el objetivo de brindar información sobre el apasionante tema de Programación Paralela y Distribuida. Además, este portal forma parte de mi evaluación para el primer parcial de la asignatura electiva profesional llamada 'Programación Paralela y Distribuida', impartida por la ingeniera <a href="https://rinafamilia.info/" target="_blank">Rina Maria Familia</a>.</p>
+        </article>
+    </main>
+    
+    <footer>
+        <div class="pie_pagina">
+            <div class="footer__derechos">
+                <small>&copy; 2023 <b>Jelsy Diaz (23-0982)</b> - Todos los Derechos Reservados.</small>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

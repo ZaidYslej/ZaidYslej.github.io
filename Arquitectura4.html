@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación Parcial - JDIAZ</title>
+    <script src="https://kit.fontawesome.com/4fd7432d2b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="icon" href="img/logo.ico">
+</head>
+<body>
+    <header>
+        <div class="header__superior">
+            <div class="logo">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="fecha">
+                <p id="fecha__actual"></p>
+               
+            </div>
+        </div>
+
+        <script>
+            var elementoFecha = document.getElementById("fecha__actual");
+        
+        function actualizarFecha() {
+            var fecha = new Date();
+            
+            var opcionesFecha = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            var fechaFormateada = fecha.toLocaleDateString('es-ES', opcionesFecha);
+            
+            elementoFecha.innerHTML = fechaFormateada;
+            }
+            
+        actualizarFecha();
+        setInterval(actualizarFecha, 1000);
+        </script>
+
+        <div class="container__menu">
+            <div class="menu">
+                <input type="checkbox" id="check__menu">
+                <label id="#label__check" for="check__menu">
+                    <i class="fas fa-bars icon__menu"></i>
+                </label>
+                <nav>
+                    <ul>
+                        <li><a href="index.html"></a></li>
+                        <li><a href="Evolucion.html">Evolución</a></li>
+                        <li><a href="#" id="selected">Arquitecturas</a>
+                            <ul>
+                                <li><a href="Arquitectura1.html">Arquitectura #1</a></li>
+                                <li><a href="Arquitectura2.html">Arquitectura #2</a></li>
+                                <li><a href="Arquitectura3.html">Arquitectura #3</a></li>
+                                <li><a href="Arquitectura4.html" id="selected">Arquitectura #4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Tecnicas.html">Técnicas</a></li>
+                        <li><a href="Aplicaciones.html">Aplicaciones</a></li>
+                        <li><a href="Referencias.html">Referencias</a></li>
+                      
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        
+    </header>
+
+    <main>
+        <article>
+            <h1>#4 Arquitectura de Memoria Distribuida con Paso de Mensajes (Hybrid Memory and Message Passing)</h1>
+            <br>
+            <img src="img/HybridMemory.png" alt="Memoria Hibrida" id="arquitecturas">
+            <p>La arquitectura de memoria distribuida con paso de mensajes, también conocida como Hybrid Memory and Message Passing, es un modelo que combina características de la arquitectura de memoria distribuida y la arquitectura de paso de mensajes. En este enfoque híbrido, cada nodo tiene su propia memoria local y puede comunicarse tanto a través del paso de mensajes como compartiendo memoria común.</p>
+            <p>En este modelo, los nodos se comunican intercambiando mensajes a través de una red de comunicación, al igual que en la arquitectura de paso de mensajes. Los mensajes se utilizan para compartir datos y coordinar tareas entre los nodos. Sin embargo, a diferencia de la arquitectura de paso de mensajes pura, los nodos también pueden acceder directamente a una memoria compartida.</p>
+            <br>
+            <p>La memoria compartida en este modelo puede ser implementada de varias formas. Por ejemplo, puede ser un espacio de memoria física compartido entre los nodos o puede ser un espacio de memoria virtual que se mapea en la memoria local de cada nodo. Los nodos pueden leer y escribir en esta memoria compartida como si fuera su propia memoria local, lo que facilita el intercambio rápido de datos.</p>
+            <p>La arquitectura de memoria distribuida con paso de mensajes es especialmente útil en casos donde combinar la comunicación basada en mensajes con el acceso directo a la memoria compartida puede optimizar el rendimiento y la eficiencia de las aplicaciones. Por ejemplo, en algoritmos donde se requiere una combinación de tareas distribuidas y cooperación intensiva entre los nodos.</p>
+            <p>Este enfoque híbrido permite aprovechar las ventajas de ambos modelos. El paso de mensajes proporciona una forma flexible de comunicación entre nodos, lo que permite la sincronización y la coordinación eficiente de tareas en aplicaciones paralelas complejas. Al mismo tiempo, el acceso directo a la memoria compartida agiliza la transferencia de datos y permite a los nodos compartir información de manera más rápida y eficiente.</p>
+            <p>Sin embargo, la arquitectura de memoria distribuida con paso de mensajes también presenta desafíos. Los programadores deben tener en cuenta la sincronización y la coherencia de los datos compartidos en la memoria compartida, así como la gestión de la comunicación a través de mensajes. Además, la elección de la implementación de la memoria compartida y el diseño adecuado de algoritmos son aspectos críticos para lograr un rendimiento óptimo.</p>
+            <p>En resumen, la arquitectura de memoria distribuida con paso de mensajes es un modelo híbrido que combina características de la arquitectura de memoria distribuida y la arquitectura de paso de mensajes. Permite la comunicación entre nodos a través del intercambio de mensajes y el acceso directo a una memoria compartida. Este enfoque híbrido es adecuado para aplicaciones que requieren tanto procesamiento distribuido como cooperación intensiva entre los nodos.</p>
+        </article>
+
+        <article>
+            <h2>Videos relacionados al tema:</h2>
+            <p>Puedes ver los siguientes videos para ampliar los conocimientos de la arquitectura en cuestión.</p> <br>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/FCPUTFmAlIg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/uiZU05CfZUg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </article>
+    </main>
+    
+    <footer>
+        <div class="pie_pagina">
+            <div class="footer__derechos">
+                <small>&copy; 2023 <b>Jelsy Diaz (23-0982)</b> - Todos los Derechos Reservados.</small>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
